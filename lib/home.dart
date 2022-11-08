@@ -13,7 +13,18 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Center(child: Text('HEIGHT FINDER')),
+        title: const Center(
+            child: Text(
+          'HEIGHT FINDER',
+          style: TextStyle(fontSize: 38.0),
+        )),
+        shape: const Border(
+          bottom: BorderSide(
+            color: Colors.black,
+            width: 4,
+          )
+        ),
+        elevation: 0.0,
       ),
       body: Center(
         child: Column(
