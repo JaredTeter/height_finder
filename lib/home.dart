@@ -20,6 +20,35 @@ class _HomeState extends State<Home> {
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
             timeButton(),
+            Column(
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.end,
+                  children: const [
+                    Text(
+                      "174",
+                      style: TextStyle(
+                        fontSize: 40.0,
+                      ),
+                    ),
+                    Padding(
+                      padding: EdgeInsets.fromLTRB(8.0, 0, 0, 3.0),
+                      child: Text(
+                        "ft",
+                        style: TextStyle(
+                          fontSize: 30.0,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+                const Image(
+                  image: AssetImage('assets/curved_underline.png'),
+                  width: 180.0,
+                ),
+              ],
+            ),
           ],
         ),
       ),
