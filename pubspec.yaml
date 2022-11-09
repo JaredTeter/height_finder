@@ -78,8 +78,10 @@ flutter:
   fonts:
    - family: Exo
      fonts:
-       - asset: fonts/Exo-VariableFont_wght.ttf
-  #       - asset: fonts/Schyler-Italic.ttf
+      - asset: fonts/Exo-VariableFont_wght.ttf
+      - asset: fonts/Exo-Bold.ttf
+      - asset: fonts/Exo-Medium.ttf
+      - asset: fonts/Exo-Light.ttf
   #         style: italic
   #   - family: Trajan Pro
   #     fonts:
