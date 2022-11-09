@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:height_finder/custom_theme.dart';
 
 import 'home.dart';
 
@@ -14,9 +15,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
+      theme: CustomTheme.lightTheme,
       home: const Home(),
     );
   }
