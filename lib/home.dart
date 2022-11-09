@@ -16,14 +16,18 @@ class _HomeState extends State<Home> {
         title: const Center(
             child: Text(
           'HEIGHT FINDER',
-          style: TextStyle(fontSize: 38.0),
+          style: TextStyle(
+            fontSize: 38.0,
+            fontFamily: 'Exo',
+            letterSpacing: 3.0,
+          ),
         )),
         shape: const Border(
-          bottom: BorderSide(
-            color: Colors.black,
-            width: 4,
-          )
-        ),
+            bottom: BorderSide(
+          color: Colors.black,
+          width: 2,
+        )),
+        toolbarHeight: 75.0,
         elevation: 0.0,
       ),
       body: Center(
