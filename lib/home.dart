@@ -20,6 +20,7 @@ class _HomeState extends State<Home> {
             fontSize: 38.0,
             fontFamily: 'Exo',
             letterSpacing: 3.0,
+            color: Colors.black,
           ),
         )),
         shape: const Border(
