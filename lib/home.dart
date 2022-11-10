@@ -33,9 +33,10 @@ class _HomeState extends State<Home> {
       ),
       body: Center(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
+            const Spacer(flex: 2),
             timeButton(),
+            const Spacer(flex: 1),
             Column(
               children: [
                 Row(
@@ -65,6 +66,7 @@ class _HomeState extends State<Home> {
                 ),
               ],
             ),
+            const Spacer(flex: 1),
           ],
         ),
       ),
