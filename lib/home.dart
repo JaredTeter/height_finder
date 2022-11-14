@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:height_finder/button.dart';
 import 'package:height_finder/provider/timer_provider.dart';
@@ -58,14 +60,14 @@ class _HomeState extends State<Home> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.end,
-                    children: const [
+                    children: [
                       Text(
-                        '0',
-                        style: TextStyle(
+                        '${(16 * pow((timer.seconds + timer.centiseconds/100), 2)).round()}',
+                        style: const TextStyle(
                           fontSize: 40.0,
                         ),
                       ),
-                      Padding(
+                      const Padding(
                         padding: EdgeInsets.fromLTRB(8.0, 0, 0, 3.0),
                         child: Text(
                           "ft",
