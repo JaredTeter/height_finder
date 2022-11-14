@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:height_finder/button.dart';
+import 'package:height_finder/provider/timer_provider.dart';
+import 'package:provider/provider.dart';
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
@@ -9,6 +11,14 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
+  var timer;
+
+  @override
+  void initState() {
+    super.initState();
+    timer = Provider.of<TimerProvider>(context, listen: false);
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -32,43 +42,46 @@ class _HomeState extends State<Home> {
         elevation: 0.0,
       ),
       body: Center(
-        child: Column(
-          children: [
-            const Spacer(flex: 2),
-            timeButton(),
-            const Spacer(flex: 1),
-            Column(
-              children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.end,
-                  children: const [
-                    Text(
-                      "174",
-                      style: TextStyle(
-                        fontSize: 40.0,
-                      ),
-                    ),
-                    Padding(
-                      padding: EdgeInsets.fromLTRB(8.0, 0, 0, 3.0),
-                      child: Text(
-                        "ft",
-                        style: TextStyle(
-                          fontSize: 30.0,
+        child:
+            Consumer<TimerProvider>(builder: (context, timerprovider, widget) {
+          return Column(
+            children: [
+              const Spacer(flex: 2),
+              timeButton(),
+              const Spacer(flex: 1),
+              Column(
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.end,
+                    children: [
+                      Text(
+                        '${timer.seconds}:${timer.centiseconds}',
+                        style: const TextStyle(
+                          fontSize: 40.0,
                         ),
                       ),
-                    ),
-                  ],
-                ),
-                const Image(
-                  image: AssetImage('assets/curved_underline.png'),
-                  width: 180.0,
-                ),
-              ],
-            ),
-            const Spacer(flex: 1),
-          ],
-        ),
+                      const Padding(
+                        padding: EdgeInsets.fromLTRB(8.0, 0, 0, 3.0),
+                        child: Text(
+                          "ft",
+                          style: TextStyle(
+                            fontSize: 30.0,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                  const Image(
+                    image: AssetImage('assets/curved_underline.png'),
+                    width: 180.0,
+                  ),
+                ],
+              ),
+              const Spacer(flex: 1),
+            ],
+          );
+        }),
       ),
     );
   }
