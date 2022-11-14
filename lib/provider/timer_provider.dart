@@ -11,7 +11,7 @@ class TimerProvider with ChangeNotifier {
   int get centiseconds => _centiseconds;
 
 
-  void startTimer() {
+  void startTimer(PointerEvent details) {
     _seconds = 0;
     _centiseconds = 0;
     
@@ -27,7 +27,7 @@ class TimerProvider with ChangeNotifier {
     });
   }
 
-  void stopTimer() {
+  void stopTimer(PointerEvent details) {
     _timer.cancel();
     notifyListeners();
   }

@@ -47,7 +47,11 @@ class _HomeState extends State<Home> {
           return Column(
             children: [
               const Spacer(flex: 2),
-              timeButton(),
+              Listener(
+                onPointerDown: timer.startTimer,
+                onPointerUp: timer.stopTimer,
+                child: timeButton(),
+              ),
               const Spacer(flex: 1),
               Column(
                 children: [
