@@ -50,7 +50,7 @@ class _HomeState extends State<Home> {
               Listener(
                 onPointerDown: timer.startTimer,
                 onPointerUp: timer.stopTimer,
-                child: timeButton(),
+                child: timeButton(timer.seconds, timer.centiseconds),
               ),
               const Spacer(flex: 1),
               Column(
@@ -58,14 +58,14 @@ class _HomeState extends State<Home> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.end,
-                    children: [
+                    children: const [
                       Text(
-                        '${timer.seconds}:${timer.centiseconds}',
-                        style: const TextStyle(
+                        '0',
+                        style: TextStyle(
                           fontSize: 40.0,
                         ),
                       ),
-                      const Padding(
+                      Padding(
                         padding: EdgeInsets.fromLTRB(8.0, 0, 0, 3.0),
                         child: Text(
                           "ft",

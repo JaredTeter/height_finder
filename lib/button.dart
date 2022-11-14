@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-Widget timeButton() {
+Widget timeButton(int seconds, int centiseconds) {
   return ElevatedButton(
     onPressed: () {},
     style: ElevatedButton.styleFrom(
@@ -11,19 +11,19 @@ Widget timeButton() {
     ),
     child: Column(
       mainAxisAlignment: MainAxisAlignment.start,
-      children: const [
+      children: [
         Padding(
-          padding: EdgeInsets.only(top: 48.0, bottom: 5.0),
+          padding: const EdgeInsets.only(top: 48.0, bottom: 5.0),
           child: Text(
-            "00:00 sec",
-            style: TextStyle(
+            "$seconds:$centiseconds sec",
+            style: const TextStyle(
               fontSize: 23.0,
               fontWeight: FontWeight.w300,
               color: Color(0xff555555),
             ),
           ),
         ),
-        Text(
+        const Text(
           "HOLD",
           style: TextStyle(
             fontSize: 55.0,
