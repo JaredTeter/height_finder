@@ -15,14 +15,30 @@ Widget timeButton(int seconds, int centiseconds) {
       mainAxisAlignment: MainAxisAlignment.start,
       children: [
         Padding(
-          padding: const EdgeInsets.only(top: 48.0, bottom: 5.0),
-          child: Text(
-            "$displaySeconds:$displayCentiseconds sec",
-            style: const TextStyle(
-              fontSize: 23.0,
-              fontWeight: FontWeight.w300,
-              color: Color(0xff555555),
-            ),
+          padding: const EdgeInsets.only(top: 47.0, bottom: 0.0),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Padding(
+                padding: const EdgeInsets.only(bottom: 4.0),
+                child: Text(
+                  "$displaySeconds:$displayCentiseconds",
+                  style: const TextStyle(
+                    fontSize: 25.0,
+                    fontFamily: 'RobotoMono',
+                    color: Color(0xff555555),
+                  ),
+                ),
+              ),
+              const Text(
+                " sec",
+                style: TextStyle(
+                  fontSize: 23.0,
+                  fontWeight: FontWeight.w300,
+                  color: Color(0xff555555),
+                ),
+              ),
+            ],
           ),
         ),
         const Text(
