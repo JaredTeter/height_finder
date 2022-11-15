@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 Widget timeButton(int seconds, int centiseconds) {
+  String displaySeconds = (seconds > 9) ? "$seconds" : "0$seconds"; //Adds leading zero when in when there is less than two digits
+  String displayCentiseconds = (centiseconds > 9) ? "$centiseconds" : "0$centiseconds"; //Adds leading zero when in when there is less than two digits
   return ElevatedButton(
     onPressed: () {},
     style: ElevatedButton.styleFrom(
@@ -15,7 +17,7 @@ Widget timeButton(int seconds, int centiseconds) {
         Padding(
           padding: const EdgeInsets.only(top: 48.0, bottom: 5.0),
           child: Text(
-            "$seconds:$centiseconds sec",
+            "$displaySeconds:$displayCentiseconds sec",
             style: const TextStyle(
               fontSize: 23.0,
               fontWeight: FontWeight.w300,
