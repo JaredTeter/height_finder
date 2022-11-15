@@ -15,7 +15,7 @@ Widget timeButton(int seconds, int centiseconds) {
       mainAxisAlignment: MainAxisAlignment.start,
       children: [
         Padding(
-          padding: const EdgeInsets.only(top: 47.0, bottom: 0.0),
+          padding: const EdgeInsets.only(top: 46.0, bottom: 0.5),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
