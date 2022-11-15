@@ -84,9 +84,9 @@ flutter:
       - asset: fonts/Exo-Medium.ttf
       - asset: fonts/Exo-Light.ttf
   #         style: italic
-  #   - family: Trajan Pro
-  #     fonts:
-  #       - asset: fonts/TrajanPro.ttf
+   - family: RobotoMono
+     fonts:
+       - asset: fonts/RobotoMono-Light.ttf
   #       - asset: fonts/TrajanPro_Bold.ttf
   #         weight: 700
   #
