@@ -44,50 +44,76 @@ class _HomeState extends State<Home> {
         elevation: 0.0,
       ),
       body: Center(
-        child:
+        child: Stack(
+          children: [
             Consumer<TimerProvider>(builder: (context, timerprovider, widget) {
-          return Column(
-            children: [
-              const Spacer(flex: 2),
-              Listener(
-                onPointerDown: timer.startTimer,
-                onPointerUp: timer.stopTimer,
-                child: timeButton(timer.seconds, timer.centiseconds),
-              ),
-              const Spacer(flex: 1),
-              Column(
+              return Column(
                 children: [
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    crossAxisAlignment: CrossAxisAlignment.end,
+                  const Spacer(flex: 2),
+                  Listener(
+                    onPointerDown: timer.startTimer,
+                    onPointerUp: timer.stopTimer,
+                    child: timeButton(timer.seconds, timer.centiseconds),
+                  ),
+                  const Spacer(flex: 1),
+                  Column(
                     children: [
-                      Text(
-                        '${(16 * pow((timer.seconds + timer.centiseconds/100), 2)).round()}',
-                        style: const TextStyle(
-                          fontSize: 40.0,
-                        ),
-                      ),
-                      const Padding(
-                        padding: EdgeInsets.fromLTRB(8.0, 0, 0, 3.0),
-                        child: Text(
-                          "ft",
-                          style: TextStyle(
-                            fontSize: 30.0,
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.end,
+                        children: [
+                          Text(
+                            '${(16 * pow((timer.seconds + timer.centiseconds / 100), 2)).round()}',
+                            style: const TextStyle(
+                              fontSize: 40.0,
+                            ),
                           ),
-                        ),
+                          const Padding(
+                            padding: EdgeInsets.fromLTRB(8.0, 0, 0, 3.0),
+                            child: Text(
+                              "ft",
+                              style: TextStyle(
+                                fontSize: 30.0,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                      const Image(
+                        image: AssetImage('assets/curved_underline.png'),
+                        width: 180.0,
                       ),
                     ],
                   ),
-                  const Image(
-                    image: AssetImage('assets/curved_underline.png'),
-                    width: 180.0,
-                  ),
+                  const Spacer(flex: 1),
                 ],
+              );
+            }),
+            Positioned(
+              bottom: 0,
+              right: 0,
+              child: Padding(
+                padding: const EdgeInsets.all(20.0),
+                child: Container(
+                  height: 80,
+                  width: 80,
+                  decoration: const BoxDecoration(
+                    color: Colors.blue,
+                    shape: BoxShape.circle,
+                  ),
+                  child: const Center(
+                    child: Text(
+                      '?',
+                      style: TextStyle(
+                        fontSize: 30,
+                      ),
+                    ),
+                  ),
+                ),
               ),
-              const Spacer(flex: 1),
-            ],
-          );
-        }),
+            ),
+          ],
+        ),
       ),
     );
   }
