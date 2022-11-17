@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:height_finder/custom_theme.dart';
+import 'package:height_finder/pages/instructions_page.dart';
 import 'package:height_finder/provider/timer_provider.dart';
 import 'package:provider/provider.dart';
 
@@ -24,6 +25,7 @@ class MyApp extends StatelessWidget {
           create: (context) => TimerProvider(),
           child: const Home(),
         ),
+        '/instructions': (context) => const Instructions(),
       },
     );
   }
