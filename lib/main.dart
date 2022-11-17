@@ -18,10 +18,13 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: CustomTheme.lightTheme,
-      home: ChangeNotifierProvider(
-        create: (context) => TimerProvider(),
-        child: const Home(),
-      ),
+      initialRoute: '/home',
+      routes: {
+        '/home': (context) => ChangeNotifierProvider(
+          create: (context) => TimerProvider(),
+          child: const Home(),
+        ),
+      },
     );
   }
 }
