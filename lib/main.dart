@@ -3,7 +3,7 @@ import 'package:height_finder/custom_theme.dart';
 import 'package:height_finder/provider/timer_provider.dart';
 import 'package:provider/provider.dart';
 
-import 'home.dart';
+import 'pages/home.dart';
 
 void main() {
   runApp(const MyApp());
