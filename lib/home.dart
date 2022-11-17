@@ -98,14 +98,20 @@ class _HomeState extends State<Home> {
                   height: 80,
                   width: 80,
                   decoration: const BoxDecoration(
-                    color: Colors.blue,
+                    color: Color(0xffFFA53F),
                     shape: BoxShape.circle,
                   ),
                   child: const Center(
-                    child: Text(
-                      '?',
-                      style: TextStyle(
-                        fontSize: 30,
+                    child: Padding(
+                      padding: EdgeInsets.only(left: 3),
+                      child: Text(
+                        '?',
+                        style: TextStyle(
+                          fontSize: 55,
+                          //fontFamily: 'Roboto',
+                          fontWeight: FontWeight.bold,
+                          color: Color(0xffFFD8AD),
+                        ),
                       ),
                     ),
                   ),
