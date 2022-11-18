@@ -94,23 +94,28 @@ class _HomeState extends State<Home> {
               right: 0,
               child: Padding(
                 padding: const EdgeInsets.all(20.0),
-                child: Container(
-                  height: 80,
-                  width: 80,
-                  decoration: const BoxDecoration(
-                    color: Color(0xffFFA53F),
-                    shape: BoxShape.circle,
-                  ),
-                  child: const Center(
-                    child: Padding(
-                      padding: EdgeInsets.only(left: 3),
-                      child: Text(
-                        '?',
-                        style: TextStyle(
-                          fontSize: 55,
-                          //fontFamily: 'Roboto',
-                          fontWeight: FontWeight.bold,
-                          color: Color(0xffFFD8AD),
+                child: GestureDetector(
+                  onTapDown: (details) {
+                    Navigator.pushNamed(context, '/instructions');
+                  },
+                  child: Container(
+                    height: 80,
+                    width: 80,
+                    decoration: const BoxDecoration(
+                      color: Color(0xffFFA53F),
+                      shape: BoxShape.circle,
+                    ),
+                    child: const Center(
+                      child: Padding(
+                        padding: EdgeInsets.only(left: 3),
+                        child: Text(
+                          '?',
+                          style: TextStyle(
+                            fontSize: 55,
+                            //fontFamily: 'Roboto',
+                            fontWeight: FontWeight.bold,
+                            color: Color(0xffFFD8AD),
+                          ),
                         ),
                       ),
                     ),
