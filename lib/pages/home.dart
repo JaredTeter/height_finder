@@ -106,6 +106,11 @@ class _HomeState extends State<Home> {
                       decoration: const BoxDecoration(
                         color: Color(0xffFFA53F),
                         shape: BoxShape.circle,
+                        boxShadow: [BoxShadow(
+                          color: Colors.grey,
+                          offset: Offset(0.0, 2.0),
+                          blurRadius: 4.0,
+                        )],
                       ),
                       child: const Center(
                         child: Padding(
