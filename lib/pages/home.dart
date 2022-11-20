@@ -98,23 +98,26 @@ class _HomeState extends State<Home> {
                   onTapDown: (details) {
                     Navigator.pushNamed(context, '/instructions');
                   },
-                  child: Container(
-                    height: 80,
-                    width: 80,
-                    decoration: const BoxDecoration(
-                      color: Color(0xffFFA53F),
-                      shape: BoxShape.circle,
-                    ),
-                    child: const Center(
-                      child: Padding(
-                        padding: EdgeInsets.only(left: 3),
-                        child: Text(
-                          '?',
-                          style: TextStyle(
-                            fontSize: 55,
-                            //fontFamily: 'Roboto',
-                            fontWeight: FontWeight.bold,
-                            color: Color(0xffFFD8AD),
+                  child: Hero(
+                    tag: 'instructions',
+                    child: Container(
+                      height: 80,
+                      width: 80,
+                      decoration: const BoxDecoration(
+                        color: Color(0xffFFA53F),
+                        shape: BoxShape.circle,
+                      ),
+                      child: const Center(
+                        child: Padding(
+                          padding: EdgeInsets.only(left: 3),
+                          child: Text(
+                            '?',
+                            style: TextStyle(
+                              fontSize: 55,
+                              //fontFamily: 'Roboto',
+                              fontWeight: FontWeight.bold,
+                              color: Color(0xffFFD8AD),
+                            ),
                           ),
                         ),
                       ),

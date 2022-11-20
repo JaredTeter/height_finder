@@ -5,6 +5,21 @@ class Instructions extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return SafeArea(
+      child: Center(
+        child: Padding(
+          padding: const EdgeInsets.symmetric(vertical: 200.0, horizontal: 20),
+          child: Hero(
+            tag: 'instructions',
+            child: Container(
+              decoration: const BoxDecoration(
+                borderRadius: BorderRadius.all(Radius.circular(20)),
+                color: Color(0xffFFA53F),
+              ),
+            ),
+          ),
+        ),
+      ),
+    );
   }
 }
