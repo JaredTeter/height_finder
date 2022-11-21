@@ -30,7 +30,7 @@ class Instructions extends StatelessWidget {
                   child: Column(
                     children: const [
                       Text(
-                        "How To Find Your Height",
+                        "Find Height",
                         style: TextStyle(fontSize: 25),
                       ),
                       SizedBox(height: 20),
