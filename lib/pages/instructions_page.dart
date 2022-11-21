@@ -18,7 +18,31 @@ class Instructions extends StatelessWidget {
                 borderRadius: BorderRadius.all(Radius.circular(20)),
                 color: Color(0xffFFA53F),
               ),
-              child: const Text('Hello'),
+              child: DefaultTextStyle(
+                style: const TextStyle(
+                  color: Colors.black,
+                  fontSize: 20,
+                ),
+                child: Padding(
+                  padding: const EdgeInsets.all(20.0),
+                  child: Column(
+                    children: const [
+                      Text(
+                        "How To Find Your Height",
+                        style: TextStyle(fontSize: 25),
+                      ),
+                      SizedBox(height: 20),
+                      Text(
+                        "1. Select an object with low air resistance such as a pebble.\n\n"
+                        "2. Press down the button and drop the object at the same instant.\n\n"
+                        "3. Release the button the moment the object touches the ground.",
+                      ),
+                      Spacer(),
+                      Text("This works best for heights from 30ft-200ft."),
+                    ],
+                  ),
+                ),
+              ),
             ),
           ),
         ),
