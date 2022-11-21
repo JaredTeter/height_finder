@@ -1,7 +1,7 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
-import 'package:height_finder/button.dart';
+import 'package:height_finder/widgets/button.dart';
 import 'package:height_finder/provider/timer_provider.dart';
 import 'package:provider/provider.dart';
 
