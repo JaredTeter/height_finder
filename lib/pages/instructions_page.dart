@@ -24,6 +24,7 @@ class Instructions extends StatelessWidget {
                 style: const TextStyle(
                   color: Colors.black,
                   fontSize: 20,
+                  fontFamily: 'Exo',
                 ),
                 child: SingleChildScrollView(
                   child: Column(

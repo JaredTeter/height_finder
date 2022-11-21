@@ -125,8 +125,9 @@ class _HomeState extends State<Home> {
                             '?',
                             style: TextStyle(
                               fontSize: 55,
-                              //fontFamily: 'Roboto',
+                              fontFamily: 'Exo',
                               fontWeight: FontWeight.bold,
+                              decoration: TextDecoration.none,
                               color: Color(0xffFFD8AD),
                             ),
                           ),
