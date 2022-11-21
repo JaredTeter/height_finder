@@ -97,7 +97,7 @@ class _HomeState extends State<Home> {
               child: Padding(
                 padding: const EdgeInsets.all(20.0),
                 child: GestureDetector(
-                  onTapDown: (details) {
+                  onTap: () {
                     Navigator.of(context).push(CustomInstructionsRoute(
                         builder: (context) {
                           return const Instructions();
