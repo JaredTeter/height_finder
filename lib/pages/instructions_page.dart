@@ -6,14 +6,16 @@ class Instructions extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-      child: Center(
-        child: Padding(
-          padding: const EdgeInsets.symmetric(vertical: 200.0, horizontal: 20),
-          child: Hero(
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Hero(
             tag: 'instructions',
             child: Container(
-              width: double.infinity,
-              height: double.infinity,
+              //width: double.infinity,
+              //height: double.infinity,
+              padding: const EdgeInsets.all(30.0),
+              margin: const EdgeInsets.symmetric(horizontal: 20),
               decoration: const BoxDecoration(
                 borderRadius: BorderRadius.all(Radius.circular(20)),
                 color: Color(0xffFFA53F),
@@ -23,8 +25,7 @@ class Instructions extends StatelessWidget {
                   color: Colors.black,
                   fontSize: 20,
                 ),
-                child: Padding(
-                  padding: const EdgeInsets.all(20.0),
+                child: SingleChildScrollView(
                   child: Column(
                     children: const [
                       Text(
@@ -37,15 +38,13 @@ class Instructions extends StatelessWidget {
                         "2. Press down the button and drop the object at the same instant.\n\n"
                         "3. Release the button the moment the object touches the ground.",
                       ),
-                      Spacer(),
-                      Text("This works best for heights from 30ft-200ft."),
                     ],
                   ),
                 ),
               ),
             ),
           ),
-        ),
+        ],
       ),
     );
   }
