@@ -1,8 +1,10 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
+import 'package:height_finder/pages/instructions_page.dart';
 import 'package:height_finder/widgets/button.dart';
 import 'package:height_finder/provider/timer_provider.dart';
+import 'package:height_finder/widgets/custom_instructions_route.dart';
 import 'package:provider/provider.dart';
 
 class Home extends StatefulWidget {
@@ -96,7 +98,11 @@ class _HomeState extends State<Home> {
                 padding: const EdgeInsets.all(20.0),
                 child: GestureDetector(
                   onTapDown: (details) {
-                    Navigator.pushNamed(context, '/instructions');
+                    Navigator.of(context).push(CustomInstructionsRoute(
+                        builder: (context) {
+                          return const Instructions();
+                        }
+                    ));
                   },
                   child: Hero(
                     tag: 'instructions',
