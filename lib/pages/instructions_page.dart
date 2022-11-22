@@ -37,7 +37,8 @@ class Instructions extends StatelessWidget {
                       Text(
                         "1. Select an object with low air resistance such as a pebble.\n\n"
                         "2. Press down the button and drop the object at the same instant.\n\n"
-                        "3. Release the button the moment the object touches the ground.",
+                        "3. Release the button the moment the object touches the ground.\n\n"
+                        "This works best for heights from 20ft-200ft.",
                       ),
                     ],
                   ),
