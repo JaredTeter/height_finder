@@ -29,6 +29,9 @@ class TimerProvider with ChangeNotifier {
 
   void stopTimer(PointerEvent details) {
     _timer.cancel();
+    if (_seconds <= 0 && _centiseconds <= 17) {
+      _centiseconds = 0;
+    }
     notifyListeners();
   }
 
