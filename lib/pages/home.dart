@@ -108,24 +108,24 @@ class _HomeState extends State<Home> {
                   child: Hero(
                     tag: 'instructions',
                     child: Container(
-                      height: 80,
-                      width: 80,
+                      height: 70,
+                      width: 70,
                       decoration: const BoxDecoration(
                         color: Color(0xffFFA53F),
                         shape: BoxShape.circle,
                         boxShadow: [BoxShadow(
                           color: Colors.grey,
-                          offset: Offset(0.0, 2.0),
-                          blurRadius: 4.0,
+                          offset: Offset(0.0, 1.0),
+                          blurRadius: 2.0,
                         )],
                       ),
                       child: const Center(
                         child: Padding(
-                          padding: EdgeInsets.only(left: 3),
+                          padding: EdgeInsets.only(left: 4, top: 2),
                           child: Text(
                             '?',
                             style: TextStyle(
-                              fontSize: 55,
+                              fontSize: 50,
                               fontFamily: 'Exo',
                               fontWeight: FontWeight.bold,
                               decoration: TextDecoration.none,
