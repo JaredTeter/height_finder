@@ -31,4 +31,11 @@ class TimerProvider with ChangeNotifier {
     _timer.cancel();
     notifyListeners();
   }
+
+  void resetTimer() {
+    _timer.cancel();
+    _seconds = 0;
+    _centiseconds = 0;
+    notifyListeners();
+  }
 }
