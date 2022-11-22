@@ -33,7 +33,7 @@ class _HomeState extends State<Home> {
           style: TextStyle(
             fontSize: 38.0,
             fontFamily: 'Exo',
-            letterSpacing: 3.0,
+            letterSpacing: 2.0,
             color: Colors.black,
           ),
         )),

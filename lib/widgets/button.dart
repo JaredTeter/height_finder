@@ -45,6 +45,7 @@ Widget timeButton(int seconds, int centiseconds) {
           "HOLD",
           style: TextStyle(
             fontSize: 55.0,
+            letterSpacing: 2.0,
           ),
         ),
       ],
