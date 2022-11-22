@@ -48,6 +48,7 @@ class _HomeState extends State<Home> {
       body: Center(
         child: Stack(
           children: [
+            GestureDetector(onTap: timer.resetTimer),
             Consumer<TimerProvider>(builder: (context, timerprovider, widget) {
               return Column(
                 children: [
